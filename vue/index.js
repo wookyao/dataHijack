@@ -1,13 +1,13 @@
-import { initData } from "./init";
+import { initState } from "./init";
 
 function Vue(options) {
-  this._int(options);
+  this._init(options);
 }
 
-Vue.prototype._int = function (options) {
+Vue.prototype._init = function (options) {
   const vm = this;
   vm.$options = options;
-  initData(vm);
+  initState(vm);
 };
 
 export default Vue;

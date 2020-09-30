@@ -1,10 +1,10 @@
-function proxyData(vm, vmKey, key) {
+function proxyData(vm, target, key) {
   Object.defineProperty(vm, key, {
     get() {
-      return vm[vmKey][key];
+      return vm[target][key];
     },
     set(newValue) {
-      vm[vmKey][key] = newValue;
+      vm[target][key] = newValue;
     },
   });
 }
